@@ -14,6 +14,19 @@ class Door
         isopen = false;
         cout << "Door is now closed." << endl;
     }
+	 void openDoor() 
+    {
+        if (!isLocked) 
+        {
+            isopen = true;
+            cout << "Door is now open." << endl;
+        } 
+        else 
+        {
+            cout << "Cannot open the door. It is locked." << endl;
+        }
+    }
+	void closeDoor();
 	void lockDoor();
 	void unlock();
 	bool isDoorOpen() const;
