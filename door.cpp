@@ -7,8 +7,6 @@ class Door
 	bool isLocked;
 	public:
 	Door(); // Initializes the door as closed and unlocked
-	void openDoor();
-	void closeDoor()
 	void closeDoor() 
     {
         isopen = false;
@@ -26,8 +24,18 @@ class Door
             cout << "Cannot open the door. It is locked." << endl;
         }
     }
-	void closeDoor();
-	void lockDoor();
+	void lockDoor()
+    {
+        if (!isopen) 
+        {
+            isLocked = true;
+            cout << "Door is now locked." << endl;
+        } 
+        else 
+        {
+            cout << "Cannot lock the door. It is still open." << endl;
+        }
+    }
 	void unlock();
 	bool isDoorOpen() const;
 	bool isDoor Locked() const;
